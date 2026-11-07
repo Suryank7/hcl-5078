@@ -1,49 +1,91 @@
+
 package in.self.crudSpringBootDemo.service;
 
+import in.self.crudSpringBootDemo.entity.Student;
+import in.self.crudSpringBootDemo.repository.StudentRepository;
+
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
 public class StudentService {
-    private String name;
-    private int age;
-    private String email;
-    private int rollNo;
-    private String subject;
 
-    public String getName() {
-        return name;
+    private final StudentRepository studentRepository;
+
+    // Constructor Injection
+    public StudentService(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    // Create Student
+    public Student createStudent(Student studentReq) {
+        studentReq.setDeleted(false);
+        Student studentResp = studentRepository.save(studentReq);
+        return studentResp;
     }
 
-    public int getAge() {
-        return age;
+    // Get Student By ID
+    public Student getStudent(Long id) {
+        Optional<Student> studentResp = studentRepository.findByIdAndDeletedIsFalse(id);
+
+        if (studentResp.isPresent()) {
+            return studentResp.get();
+        }
+        return null;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    // Get All Students
+    public List<Student> getAllStudent() {
+        List<Student> studentList = studentRepository.findByDeletedIsFalse();
+        return studentList;
     }
 
-    public String getEmail() {
-        return email;
+    // Update Student
+    public Student updateStudent(Long id, Student studentReq) {
+        Optional<Student> existingStudent = studentRepository.findByIdAndDeletedIsFalse(id);
+
+        if (existingStudent.isEmpty()) {
+            return null;
+        }
+
+        Student studentToSave = existingStudent.get();
+        studentToSave.setName(studentReq.getName());
+        studentToSave.setRollNo(studentReq.getRollNo());
+        studentToSave.setSubject(studentReq.getSubject());
+        studentToSave.setEmail(studentReq.getEmail());
+        studentToSave.setAge(studentReq.getAge());
+        studentToSave.setDeleted(false);
+
+        return studentRepository.save(studentToSave);
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    // Hard Delete
+    public Boolean deleteStudent(Long id) {
+        Boolean isStudent = studentRepository.existsById(id);
+
+        if (!isStudent) {
+            return false;
+        }
+
+        studentRepository.deleteById(id);
+        return true;
     }
 
-    public int getRollNo() {
-        return rollNo;
-    }
+    // Soft Delete
+    public Boolean deleteStudentSoftly(Long id) {
+        Optional<Student> existingStudent =
+                studentRepository.findByIdAndDeletedIsFalse(id);
 
-    public void setRollNo(int rollNo) {
-        this.rollNo = rollNo;
-    }
+        if (existingStudent.isEmpty()) {
+            return false;
+        }
 
-    public String getSubject() {
-        return subject;
-    }
+        Student studentToSave = existingStudent.get();
+        studentToSave.setDeleted(true);
+        studentRepository.save(studentToSave);
 
-    public void setSubject(String subject) {
-        this.subject = subject;
+        return true;
     }
 }
