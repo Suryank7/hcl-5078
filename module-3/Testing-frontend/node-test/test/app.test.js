@@ -1,6 +1,20 @@
-import { greet, greetInHindi } from '../app.js'; 
-import { describe, test } from 'node:test'; 
+import { greet, greetInHindi, processOrder } from '../app.js'; 
+import { describe, mock, test } from 'node:test'; 
 import assert from 'node:assert'; 
+
+describe("order feature", () => {
+    test("it process the order correctly", () => {
+        const mockedprocessPayment = mock.fn((amount) => {
+            console.log('i am mocked process payment function');
+            return { id: 123, amount };
+            
+        });
+        const expected = { id: 123, amount: 5000 };
+        const actual = processOrder({ amount: 5000 }, { processPayment: mockedprocessPayment })
+        assert.deepStrictEqual(actual, expected);
+    });
+    
+});
 
 describe("greeting functions", () => {
     test("greet returns the correct greeting", () => {
