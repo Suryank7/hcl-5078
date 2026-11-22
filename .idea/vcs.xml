@@ -4,6 +4,6 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module-2_springboot/SpringCoreFundamentals" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module-2_springboot/hrmsdatabse" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/module-3/day_2_authentication/jwtDemo" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module-3-Integration-Testing-AI/day_2_authentication/jwtDemo" vcs="Git" />
   </component>
 </project>

@@ -1,0 +1,16 @@
+#root:has(.nx-login-page) {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  border: 0;
+  display: block;
+  text-align: left;
+}
+
+.nx-login-page .nx-auth__heading { margin-bottom: 30px; }
+.nx-login-page .nx-auth__input-wrap input { letter-spacing: 0.05px; }
+
+@media (max-width: 720px) {
+  #root:has(.nx-login-page) { min-height: 100svh; }
+}

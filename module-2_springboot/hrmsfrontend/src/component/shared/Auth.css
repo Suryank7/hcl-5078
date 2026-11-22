@@ -1,0 +1,269 @@
+.nx-auth {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: minmax(360px, 0.93fr) minmax(420px, 1.07fr);
+  background: var(--nx-cream);
+}
+
+.nx-auth__showcase {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: hidden;
+  padding: clamp(30px, 4.4vw, 66px);
+  background:
+    radial-gradient(circle at 14% 82%, rgba(255, 221, 119, 0.55), transparent 27%),
+    radial-gradient(circle at 90% 12%, rgba(255, 239, 184, 0.9), transparent 32%),
+    linear-gradient(145deg, #fbfaf3 0%, #f8f5e9 100%);
+  isolation: isolate;
+}
+
+.nx-auth__showcase::before,
+.nx-auth__showcase::after {
+  position: absolute;
+  z-index: -1;
+  border: 1px solid rgba(214, 190, 108, 0.22);
+  border-radius: 50%;
+  content: '';
+  pointer-events: none;
+}
+
+.nx-auth__showcase::before {
+  top: 24%;
+  left: -220px;
+  width: 600px;
+  height: 600px;
+}
+
+.nx-auth__showcase::after {
+  right: -210px;
+  bottom: -300px;
+  width: 680px;
+  height: 680px;
+}
+
+.nx-auth__showcase .nexora-brand__mark {
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.nx-auth__showcase .nexora-brand__mark svg { width: 35px; height: 35px; }
+.nx-auth__showcase .nexora-brand__copy strong { font-size: 25px; }
+
+.nx-auth__pitch {
+  width: min(100%, 550px);
+  margin: auto 0;
+  padding: 58px 0 54px;
+}
+
+.nx-auth__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #8f7b3c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.nx-auth__eyebrow::before {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--nx-yellow);
+  box-shadow: 0 0 0 4px rgba(244, 204, 67, 0.18);
+  content: '';
+}
+
+.nx-auth__pitch h1 {
+  max-width: 500px;
+  margin: 20px 0 16px;
+  color: #22231f;
+  font-family: 'Manrope', 'DM Sans', sans-serif;
+  font-size: clamp(39px, 4.3vw, 58px);
+  font-weight: 700;
+  letter-spacing: -2.8px;
+  line-height: 1.1;
+}
+
+.nx-auth__pitch h1 span { color: #b38d1b; }
+
+.nx-auth__pitch > p {
+  max-width: 410px;
+  margin: 0;
+  color: #777970;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.nx-auth__preview {
+  position: relative;
+  width: min(100%, 430px);
+  margin-top: 38px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.57);
+  box-shadow: 0 22px 55px rgba(121, 102, 39, 0.11);
+  transform: rotate(-2deg);
+  backdrop-filter: blur(12px);
+}
+
+.nx-auth__preview-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.nx-auth__preview-user { display: flex; align-items: center; gap: 10px; }
+.nx-auth__preview-avatar {
+  display: grid;
+  width: 37px;
+  height: 37px;
+  place-items: center;
+  border-radius: 50%;
+  background: #252622;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.nx-auth__preview-user small,
+.nx-auth__preview-user strong { display: block; }
+.nx-auth__preview-user small { color: #9b9c94; font-size: 9px; }
+.nx-auth__preview-user strong { margin-top: 2px; color: #30312d; font-size: 11px; }
+.nx-auth__preview-chip { padding: 6px 9px; border-radius: 20px; background: #fff5ce; color: #9a7b1a; font-size: 9px; font-weight: 700; }
+
+.nx-auth__preview-row {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 10px;
+}
+
+.nx-auth__preview-attendance {
+  display: flex;
+  min-height: 91px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px;
+  border-radius: 15px;
+  background: #252622;
+  color: #fff;
+}
+
+.nx-auth__preview-attendance small { color: #c4c4bb; font-size: 9px; }
+.nx-auth__preview-attendance strong { font-family: 'Manrope', sans-serif; font-size: 21px; letter-spacing: -0.7px; }
+.nx-auth__preview-attendance span { color: #efce55; font-size: 9px; }
+
+.nx-auth__preview-balance {
+  display: flex;
+  min-height: 91px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 14px;
+  border: 1px solid #f0eee3;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.9);
+}
+.nx-auth__preview-balance small { color: #92948b; font-size: 9px; }
+.nx-auth__preview-balance strong { color: #282923; font-size: 20px; }
+.nx-auth__preview-balance span { color: #77796f; font-size: 9px; }
+
+.nx-auth__preview-tools { display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; margin-top: 10px; }
+.nx-auth__preview-tools span { padding: 12px 6px; border: 1px solid #eeede6; border-radius: 12px; background: rgba(255,255,255,.84); color: #55574f; font-size: 9px; text-align: center; }
+
+.nx-auth__showcase-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  color: #99978a;
+  font-size: 10px;
+}
+
+.nx-auth__footer-dots { display: flex; gap: 5px; }
+.nx-auth__footer-dots span { width: 17px; height: 4px; border-radius: 9px; background: #dedbd0; }
+.nx-auth__footer-dots span:first-child { width: 28px; background: var(--nx-yellow); }
+
+.nx-auth__panel {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 44px clamp(26px, 6vw, 86px);
+  background: linear-gradient(145deg, #fffefa 0%, #fbfaf4 100%);
+}
+
+.nx-auth__inner { width: min(100%, 425px); margin: auto; }
+.nx-auth__mobile-brand { display: none; margin-bottom: 45px; }
+.nx-auth__heading { margin-bottom: 30px; }
+.nx-auth__heading .nx-auth__eyebrow { color: #989080; font-size: 9px; }
+.nx-auth__heading h2 {
+  margin: 13px 0 8px;
+  color: #242520;
+  font-family: 'Manrope', 'DM Sans', sans-serif;
+  font-size: clamp(28px, 3vw, 35px);
+  font-weight: 750;
+  letter-spacing: -1.4px;
+  line-height: 1.17;
+}
+.nx-auth__heading p { margin: 0; color: #87887f; font-size: 12px; }
+.nx-auth__form { display: grid; gap: 17px; }
+.nx-auth__field label { display: block; margin: 0 0 8px; color: #45463f; font-size: 11px; font-weight: 700; }
+.nx-auth__input-wrap {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  gap: 11px;
+  padding: 0 14px;
+  border: 1px solid #ecebe3;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.9);
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+.nx-auth__input-wrap:focus-within { border-color: #dfbd4b; box-shadow: 0 0 0 4px rgba(244, 204, 67, 0.13); }
+.nx-auth__input-icon { width: 18px; height: 18px; flex: 0 0 auto; color: #a1a297; }
+.nx-auth__input-wrap input { width: 100%; min-width: 0; height: 50px; padding: 0; border: 0; outline: 0; background: transparent; color: #30312c; font-size: 12px; }
+.nx-auth__input-wrap input::placeholder { color: #b0b1a8; opacity: 1; }
+.nx-auth__toggle { flex: 0 0 auto; padding: 5px 0 5px 6px; border: 0; background: transparent; color: #777970; cursor: pointer; font-size: 10px; font-weight: 700; }
+.nx-auth__row { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: -5px; }
+.nx-auth__hint { color: #929389; font-size: 10px; }
+.nx-auth__text-link { color: #9a7a18; font-size: 11px; font-weight: 700; text-decoration: none; }
+.nx-auth__text-link:hover { color: #715913; text-decoration: underline; }
+.nx-auth__submit { width: 100%; min-height: 52px; margin-top: 5px; border-radius: 14px; }
+.nx-auth__divider { display: flex; align-items: center; gap: 12px; margin: 20px 0 16px; color: #a2a297; font-size: 10px; }
+.nx-auth__divider::before,
+.nx-auth__divider::after { height: 1px; flex: 1; background: #e9e8df; content: ''; }
+.nx-auth__alternate { width: 100%; min-height: 49px; border-radius: 13px; font-size: 11px; }
+.nx-auth__switch { margin: 22px 0 0; color: #8c8d84; font-size: 11px; text-align: center; }
+.nx-auth__bottom { margin-top: 55px; color: #a5a59b; font-size: 9px; text-align: center; }
+.nx-auth__bottom span { margin: 0 6px; color: #d0cfc5; }
+.nx-auth__form .nexora-alert { margin: 0; }
+
+@media (max-width: 900px) {
+  .nx-auth { grid-template-columns: minmax(290px, 0.8fr) minmax(370px, 1fr); }
+  .nx-auth__showcase { padding: 34px; }
+  .nx-auth__pitch h1 { font-size: 43px; }
+  .nx-auth__panel { padding-right: 34px; padding-left: 34px; }
+}
+
+@media (max-width: 720px) {
+  .nx-auth { display: block; min-height: 100svh; }
+  .nx-auth__showcase { display: none; }
+  .nx-auth__panel { min-height: 100svh; padding: 30px 23px 25px; background: radial-gradient(ellipse at 100% 0%, rgba(255, 232, 161, 0.36), transparent 30%), #fbfaf4; }
+  .nx-auth__inner { width: min(100%, 450px); }
+  .nx-auth__mobile-brand { display: block; margin-bottom: 52px; }
+  .nx-auth__heading { margin-bottom: 27px; }
+  .nx-auth__heading h2 { font-size: 31px; }
+  .nx-auth__form { gap: 15px; }
+  .nx-auth__bottom { margin-top: 42px; }
+}
+
+@media (max-width: 390px) {
+  .nx-auth__panel { padding-right: 18px; padding-left: 18px; }
+  .nx-auth__mobile-brand { margin-bottom: 39px; }
+  .nx-auth__heading h2 { font-size: 28px; }
+}

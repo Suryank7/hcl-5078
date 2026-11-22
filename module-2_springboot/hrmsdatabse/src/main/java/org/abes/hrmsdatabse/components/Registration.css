@@ -1,0 +1,22 @@
+#root:has(.nx-registration-page) {
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  margin: 0;
+  border: 0;
+  display: block;
+  text-align: left;
+}
+
+.nx-registration-page .nx-auth__heading { margin-bottom: 23px; }
+.nx-registration-page .nx-auth__form { gap: 12px; }
+.nx-registration-form__split { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.nx-registration-page .nx-auth__input-wrap { min-height: 48px; }
+.nx-registration-page .nx-auth__input-wrap input { height: 46px; min-width: 0; }
+.nx-registration-page .nx-auth__submit { margin-top: 5px; }
+
+@media (max-width: 720px) {
+  #root:has(.nx-registration-page) { min-height: 100svh; }
+  .nx-registration-page .nx-auth__form { gap: 13px; }
+  .nx-registration-form__split { grid-template-columns: 1fr; gap: 13px; }
+}

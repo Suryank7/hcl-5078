@@ -1,0 +1,14 @@
+#root:has(.nx-sample-page) { width: 100%; max-width: none; min-height: 100vh; margin: 0; border: 0; display: block; text-align: left; }
+.nx-sample-page { display: grid; place-items: center; padding: 25px; background: radial-gradient(ellipse at 10% 0%, rgba(255, 231, 153, .25), transparent 35%), #f7f7f2; }
+.nx-sample-card { width: min(100%, 690px); padding: clamp(22px, 5vw, 38px); border: 1px solid #eeede6; border-radius: 21px; background: #fff; box-shadow: 0 18px 55px rgba(40,40,30,.06); }
+.nx-sample-card__eyebrow { color: #a18a42; font-size: 8px; font-weight: 800; letter-spacing: 1.5px; }
+.nx-sample-card h1 { margin: 10px 0 6px; color: #282923; font-family: 'Manrope', sans-serif; font-size: 28px; letter-spacing: -1px; }
+.nx-sample-card > p { margin: 0; color: #898a81; font-size: 11px; line-height: 1.7; }
+.nx-sample-card__metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin-top: 24px; }
+.nx-sample-card__metrics article { display: grid; gap: 12px; padding: 19px; border: 1px solid #eeede6; border-radius: 15px; background: #fffefa; }
+.nx-sample-card__metrics article > span { color: #95968c; font-size: 9px; font-weight: 700; }
+.nx-sample-card__metrics strong { color: #292a24; font-family: 'Manrope', sans-serif; font-size: 34px; letter-spacing: -1px; }
+.nx-sample-card__metrics button { display: flex; min-height: 38px; align-items: center; justify-content: space-between; padding: 0 11px; border: 0; border-radius: 9px; background: #282923; color: #fff; cursor: pointer; font-size: 10px; font-weight: 650; }
+.nx-sample-card__metrics button b { color: #f4d45d; font-size: 16px; }
+.nx-sample-card__data { margin-top: 16px; padding: 12px; border-radius: 9px; background: #f7f7f2; color: #6c6e64; font-size: 10px; overflow-wrap: anywhere; }
+@media (max-width: 520px) { .nx-sample-card__metrics { grid-template-columns: 1fr; } }

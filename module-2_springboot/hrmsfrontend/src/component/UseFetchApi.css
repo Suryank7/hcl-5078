@@ -1,0 +1,22 @@
+#root:has(.nx-service-page) { width: 100%; max-width: none; min-height: 100vh; margin: 0; border: 0; display: block; text-align: left; }
+.nx-service-page { display: flex; flex-direction: column; background: radial-gradient(ellipse at 50% 0%, rgba(255, 231, 153, .24), transparent 38%), #f8f8f3; }
+.nx-service-page__header { display: flex; height: 76px; align-items: center; justify-content: space-between; padding: 0 clamp(20px, 6vw, 82px); border-bottom: 1px solid #edede5; background: rgba(255,255,255,.78); }
+.nx-service-page__header > a { color: #72746b; font-size: 10px; font-weight: 700; text-decoration: none; }
+.nx-service-page__header > a:hover { color: #a1801b; }
+.nx-service-page__header > a span { margin-left: 5px; }
+.nx-service-card { display: grid; width: min(calc(100% - 36px), 510px); justify-items: center; gap: 14px; margin: auto; padding: 42px; border: 1px solid #eeede5; border-radius: 24px; background: #fff; box-shadow: 0 22px 70px rgba(41, 41, 31, .06); text-align: center; }
+.nx-service-card__eyebrow { color: #9b9c90; font-size: 8px; font-weight: 800; letter-spacing: 1.5px; }
+.nx-service-card__symbol { display: grid; width: 57px; height: 57px; place-items: center; border-radius: 18px; font-size: 25px; font-weight: 800; }
+.nx-service-card__symbol.is-online { background: #edf6e9; color: #52804f; }
+.nx-service-card__symbol.is-error { background: #fff0ed; color: #ba5c4f; }
+.nx-service-card__symbol.is-loading { background: #fff5d6; }
+.nx-service-card__spinner { width: 21px; height: 21px; border: 2px solid #e8dcae; border-top-color: #b18d20; border-radius: 50%; animation: nx-service-spin .7s linear infinite; }
+@keyframes nx-service-spin { to { transform: rotate(360deg); } }
+.nx-service-card h1 { margin: 5px 0 0; color: #292a24; font-family: 'Manrope', sans-serif; font-size: 24px; letter-spacing: -.8px; }
+.nx-service-card > p { max-width: 380px; margin: 0; color: #85877d; font-size: 11px; line-height: 1.8; overflow-wrap: anywhere; }
+.nx-service-card__response { display: grid; width: 100%; gap: 5px; margin-top: 8px; padding: 14px; border-radius: 12px; background: #f8f8f3; text-align: left; }
+.nx-service-card__response small { color: #a0a196; font-size: 8px; font-weight: 800; letter-spacing: 1px; }
+.nx-service-card__response strong { color: #57594f; font-size: 10px; font-weight: 600; overflow-wrap: anywhere; }
+.nx-service-card__endpoint { display: flex; align-items: center; gap: 7px; margin-top: 5px; color: #a0a196; font-size: 8px; overflow-wrap: anywhere; }
+.nx-service-card__endpoint span { width: 6px; height: 6px; flex: 0 0 auto; border-radius: 50%; background: #7ca879; }
+@media (max-width: 480px) { .nx-service-card { padding: 30px 20px; } .nx-service-page__header { height: 65px; padding: 0 17px; } }

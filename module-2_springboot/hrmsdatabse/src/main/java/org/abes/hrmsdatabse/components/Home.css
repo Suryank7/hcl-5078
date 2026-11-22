@@ -1,0 +1,92 @@
+#root:has(.nx-home) { width: 100%; max-width: none; min-height: 100vh; margin: 0; border: 0; display: block; text-align: left; }
+.nx-home { overflow: hidden; background: #fbfaf4; }
+.nx-home__header { display: flex; min-height: 88px; align-items: center; justify-content: space-between; gap: 24px; padding: 16px clamp(22px, 6.5vw, 96px); border-bottom: 1px solid rgba(232, 229, 215, .8); background: rgba(255, 255, 252, .72); }
+.nx-home__nav { display: flex; align-items: center; gap: clamp(15px, 2.5vw, 34px); }
+.nx-home__nav > a:not(.nexora-button) { color: #65675f; font-size: 11px; font-weight: 600; text-decoration: none; }
+.nx-home__nav > a:not(.nexora-button):hover { color: #242520; }
+.nx-home__nav-cta { min-height: 42px; padding: 0 16px; border-radius: 11px; font-size: 11px; }
+.nx-home__hero { position: relative; display: grid; width: min(100%, 1390px); min-height: 630px; grid-template-columns: minmax(0, .93fr) minmax(390px, 1.07fr); align-items: center; gap: clamp(30px, 7vw, 100px); margin: 0 auto; padding: 76px clamp(22px, 7vw, 105px) 88px; }
+.nx-home__copy { position: relative; z-index: 1; max-width: 560px; }
+.nx-home__copy h1 { margin: 20px 0 17px; color: #23241f; font-family: 'Manrope', 'DM Sans', sans-serif; font-size: clamp(48px, 5.3vw, 72px); font-weight: 750; letter-spacing: -4px; line-height: 1.04; }
+.nx-home__copy h1 span { color: #b79226; }
+.nx-home__copy > p { max-width: 445px; margin: 0; color: #7b7d73; font-size: 14px; line-height: 1.9; }
+.nx-home__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 31px; }
+.nx-home__actions .nexora-button { min-height: 51px; padding: 0 22px; }
+.nx-home__secondary { color: #55574f; font-size: 11px; font-weight: 700; text-decoration: none; }
+.nx-home__secondary:hover { color: #a07d17; }
+.nx-home__trust { display: flex; align-items: center; gap: 9px; margin-top: 37px; color: #98998f; font-size: 10px; }
+.nx-home__trust-icon { display: grid; width: 19px; height: 19px; place-items: center; border-radius: 50%; background: #eaf3e8; color: #4f805f; font-size: 11px; font-weight: 800; }
+.nx-home__visual { position: relative; display: grid; min-height: 445px; place-items: center; }
+.nx-home__orb { position: absolute; border-radius: 50%; pointer-events: none; }
+.nx-home__orb--one { top: 16px; right: 4%; width: 360px; height: 360px; background: radial-gradient(circle, rgba(250, 222, 128, .45), rgba(250, 222, 128, 0) 69%); }
+.nx-home__orb--two { bottom: 0; left: 0; width: 310px; height: 310px; background: radial-gradient(circle, rgba(232, 231, 207, .7), rgba(232, 231, 207, 0) 72%); }
+.nx-home__preview { position: relative; z-index: 1; width: min(100%, 475px); padding: 23px; border: 1px solid rgba(255, 255, 255, .9); border-radius: 28px; background: rgba(255, 255, 255, .78); box-shadow: 0 26px 80px rgba(88, 77, 39, .12); transform: rotate(2deg); backdrop-filter: blur(12px); }
+.nx-home__preview-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 21px; }
+.nx-home__preview-top small,.nx-home__preview-top strong { display: block; }
+.nx-home__preview-top small { color: #a3a397; font-size: 8px; font-weight: 800; letter-spacing: 1.2px; }
+.nx-home__preview-top strong { margin-top: 4px; color: #292a25; font-family: 'Manrope', sans-serif; font-size: 20px; letter-spacing: -.6px; }
+.nx-home__preview-avatar { display: grid; width: 39px; height: 39px; place-items: center; border-radius: 50%; background: #242520; color: #f5d45d; font-weight: 800; }
+.nx-home__preview-attendance { display: flex; min-height: 118px; align-items: center; justify-content: space-between; gap: 14px; padding: 19px; border-radius: 19px; background: #252622; color: #fff; }
+.nx-home__preview-attendance small,.nx-home__preview-attendance strong,.nx-home__preview-attendance span { display: block; }
+.nx-home__preview-attendance small { color: #d1d0c7; font-size: 8px; font-weight: 800; letter-spacing: 1px; }
+.nx-home__preview-attendance strong { margin: 6px 0 4px; font-family: 'Manrope', sans-serif; font-size: 21px; letter-spacing: -.5px; }
+.nx-home__preview-attendance span { color: #b7b7ac; font-size: 9px; }
+.nx-home__clock { display: grid; width: 48px; height: 48px; flex: 0 0 auto; place-items: center; border-radius: 15px; background: #f4d458; color: #292a25; font-size: 25px; }
+.nx-home__preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; margin-top: 12px; }
+.nx-home__preview-grid > div { display: grid; min-height: 116px; align-content: start; gap: 7px; padding: 15px; border: 1px solid #efeee7; border-radius: 16px; background: #fff; }
+.nx-home__tile-icon { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 10px; background: #eaf3e8; color: #4f805f; font-size: 16px; }
+.nx-home__tile-icon--yellow { background: #fff4ce; color: #a78216; }
+.nx-home__preview-grid small { margin-top: 3px; color: #9b9c92; font-size: 9px; }
+.nx-home__preview-grid strong { color: #35362f; font-size: 11px; }
+.nx-home__preview-footer { display: flex; align-items: center; gap: 8px; margin-top: 17px; color: #999a90; font-size: 9px; }
+.nx-home__preview-footer > span { width: 6px; height: 6px; border-radius: 50%; background: #7eac78; }
+.nx-home__floating-note { position: absolute; z-index: 2; right: -15px; bottom: 20px; display: flex; align-items: center; gap: 10px; padding: 12px 15px; border: 1px solid #f0eddf; border-radius: 15px; background: rgba(255,255,255,.92); box-shadow: 0 12px 30px rgba(52, 48, 29, .09); transform: rotate(-3deg); }
+.nx-home__floating-note > span { display: grid; width: 29px; height: 29px; place-items: center; border-radius: 9px; background: #fff4cd; color: #a17e17; }
+.nx-home__floating-note strong,.nx-home__floating-note small { display: block; }
+.nx-home__floating-note strong { color: #383932; font-size: 10px; }
+.nx-home__floating-note small { margin-top: 2px; color: #9a9b90; font-size: 8px; }
+.nx-home__features { padding: 67px clamp(22px, 7vw, 105px) 75px; border-top: 1px solid #eeece2; background: #fffefa; }
+.nx-home__section-heading { text-align: center; }
+.nx-home__section-heading h2 { margin: 11px 0 0; color: #272822; font-family: 'Manrope', sans-serif; font-size: clamp(24px, 3vw, 33px); letter-spacing: -1.1px; }
+.nx-home__feature-grid { display: grid; width: min(100%, 1050px); grid-template-columns: repeat(3, 1fr); gap: 15px; margin: 33px auto 0; }
+.nx-home__feature-grid article { padding: 23px; border: 1px solid #eeede5; border-radius: 17px; background: #fff; }
+.nx-home__feature-icon { display: grid; width: 39px; height: 39px; place-items: center; border-radius: 12px; background: #edf4e9; color: #4e7958; font-size: 19px; }
+.nx-home__feature-icon--yellow { background: #fff4ce; color: #a17e17; }
+.nx-home__feature-icon--dark { background: #282923; color: #f4d45d; }
+.nx-home__feature-grid h3 { margin: 17px 0 7px; color: #34352e; font-family: 'Manrope', sans-serif; font-size: 14px; }
+.nx-home__feature-grid p { margin: 0; color: #898a80; font-size: 11px; line-height: 1.75; }
+.nx-home__footer { padding: 22px; border-top: 1px solid #eeece2; color: #a1a195; font-size: 9px; text-align: center; }
+.nx-home__footer span { margin: 0 6px; }
+
+@media (max-width: 900px) {
+  .nx-home__hero { min-height: auto; grid-template-columns: 1fr 1fr; gap: 26px; padding-top: 65px; padding-bottom: 70px; }
+  .nx-home__copy h1 { font-size: 51px; }
+  .nx-home__visual { min-height: 390px; }
+  .nx-home__preview { padding: 17px; }
+  .nx-home__floating-note { right: -7px; }
+}
+@media (max-width: 680px) {
+  .nx-home__header { min-height: 72px; padding: 12px 18px; }
+  .nx-home__header .nexora-brand__mark { width: 37px; height: 37px; }
+  .nx-home__header .nexora-brand__copy strong { font-size: 19px; }
+  .nx-home__header .nexora-brand__copy small { font-size: 8px; }
+  .nx-home__nav { gap: 14px; }
+  .nx-home__nav > a:first-child { display: none; }
+  .nx-home__nav-cta { min-height: 38px; padding: 0 11px; font-size: 10px; }
+  .nx-home__hero { grid-template-columns: 1fr; gap: 34px; padding: 56px 22px 62px; }
+  .nx-home__copy h1 { font-size: clamp(45px, 12vw, 58px); letter-spacing: -2.8px; }
+  .nx-home__copy > p { font-size: 13px; }
+  .nx-home__visual { min-height: 360px; }
+  .nx-home__preview { width: min(100%, 440px); transform: rotate(1deg); }
+  .nx-home__floating-note { right: 0; bottom: 2px; }
+  .nx-home__features { padding: 52px 20px 58px; }
+  .nx-home__feature-grid { grid-template-columns: 1fr; gap: 10px; margin-top: 25px; }
+  .nx-home__feature-grid article { padding: 19px; }
+}
+@media (max-width: 380px) {
+  .nx-home__header .nexora-brand__copy small { display: none; }
+  .nx-home__nav { gap: 8px; }
+  .nx-home__nav > a:not(.nexora-button) { font-size: 10px; }
+  .nx-home__actions { gap: 14px; }
+  .nx-home__preview-attendance { padding: 13px; }
+}

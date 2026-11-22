@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --nx-ink: #20211f;
+  --nx-ink-soft: #383b37;
+  --nx-muted: #858982;
+  --nx-muted-light: #a4a89f;
+  --nx-line: #ecece6;
+  --nx-surface: #ffffff;
+  --nx-canvas: #f7f7f2;
+  --nx-cream: #fbfaf3;
+  --nx-yellow: #f4ce4d;
+  --nx-yellow-soft: #fff4cb;
+  --nx-green: #4f805f;
+  --nx-green-soft: #eaf3e8;
+  --nx-red: #d96d61;
+  --nx-red-soft: #fff0ed;
+  --nx-shadow: 0 16px 50px rgba(42, 42, 31, 0.06);
+  font-family: 'DM Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: var(--nx-ink);
+  background: var(--nx-canvas);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+.nexora-page,
+.nexora-page * {
+  box-sizing: border-box;
+}
+
+.nexora-page {
+  width: 100%;
+  min-height: 100vh;
+  color: var(--nx-ink);
+  font-family: 'DM Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: left;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nexora-page button,
+.nexora-page input,
+.nexora-page select,
+.nexora-page textarea {
+  font: inherit;
+}
+
+.nexora-page button,
+.nexora-page a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nexora-page a {
+  color: inherit;
+}
+
+.nexora-page button:focus-visible,
+.nexora-page a:focus-visible,
+.nexora-page input:focus-visible {
+  outline: 3px solid rgba(244, 204, 67, 0.5);
+  outline-offset: 3px;
+}
+
+.nexora-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  color: var(--nx-ink);
+}
+
+.nexora-brand__mark {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 5px 18px rgba(37, 34, 22, 0.07);
+}
+
+.nexora-brand__mark svg {
+  display: block;
+  width: 31px;
+  height: 31px;
+}
+
+.nexora-brand__copy {
+  display: grid;
+  gap: 0;
+  min-width: 0;
+}
+
+.nexora-brand__copy strong {
+  color: #20211f;
+  font-family: 'Manrope', 'DM Sans', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -1.15px;
+  line-height: 1.08;
+}
+
+.nexora-brand__copy small {
+  margin-top: 4px;
+  color: #83867f;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.nexora-button {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 20px;
+  border: 1px solid #242424;
+  border-radius: 13px;
+  background: #242424;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.nexora-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #393a36;
+  box-shadow: 0 8px 18px rgba(32, 32, 30, 0.13);
+  color: #fff;
+}
+
+.nexora-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.nexora-button--yellow {
+  border-color: var(--nx-yellow);
+  background: var(--nx-yellow);
+  color: #23231f;
+}
+
+.nexora-button--yellow:hover:not(:disabled) {
+  background: #f7d96e;
+  color: #23231f;
+}
+
+.nexora-button--light {
+  border-color: #e9e9e2;
+  background: #fff;
+  color: #3b3d38;
+}
+
+.nexora-button--light:hover:not(:disabled) {
+  border-color: #d8d8cf;
+  background: #fafaf6;
+  color: #252622;
+}
+
+.nexora-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid #f0cbc5;
+  border-radius: 12px;
+  background: #fff3f0;
+  color: #a54f45;
+  font-size: 12px;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.nexora-alert--success {
+  border-color: #d9e9d7;
+  background: #f1f8ef;
+  color: #47704e;
+}
+
+.nexora-alert__icon {
+  display: grid;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(165, 79, 69, 0.1);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.nexora-alert--success .nexora-alert__icon {
+  background: rgba(71, 112, 78, 0.1);
+}
+
+.nexora-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: nexora-spin 700ms linear infinite;
+}
+
+@keyframes nexora-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nexora-page *,
+  .nexora-page *::before,
+  .nexora-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
