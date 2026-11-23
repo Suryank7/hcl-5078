@@ -12,6 +12,4 @@ public class HrmsdatabseApplication {
         System.out.println("Welcome to Springboot App development");
     }
 
-
-
 }
